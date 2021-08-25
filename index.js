@@ -1,5 +1,9 @@
 var userlocation="";
-var Pre36;
+
+var city=document.getElementById(".City");
+var tempature=document.getElementById(".tempatureValue");
+var rainValue=document.getElementById("rainingValue");
+
 
 //fetch data and save it Name: 36P means 36 hour Prediction
 function FetchData(storeName,url){
@@ -22,7 +26,6 @@ fetch(url).then(response=>{
 //use this func when loading
 function loadpageFunc(){
 FetchData('36P','https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-EED5FE00-AC69-4FA0-9F01-4E32D94AB7A4');
-Pre36=localStorage.getItem("36hrPredition");
 
 }
 //shown drop down boxes
@@ -46,9 +49,8 @@ function changeShownValue(dataPos){
 
 
 
-
 }
-//use this func when user press the dropdown menu
+//use this func when user press the dropdown element
 function Search(CityToSearch){
 var a=JSON.parse(localStorage.getItem('36P'));
 console.log(a);
