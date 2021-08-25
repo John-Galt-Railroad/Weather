@@ -3,6 +3,7 @@ var userlocation="";
 var city=document.getElementById(".City");
 var tempature=document.getElementById(".tempatureValue");
 var rainValue=document.getElementById("rainingValue");
+var selfSenseTemp;
 
 
 //fetch data and save it Name: 36P means 36 hour Prediction
@@ -47,6 +48,7 @@ function showSearchResult(){
 function changeShownValue(dataPos){
     var a=JSON.parse(localStorage.getItem('36P'));
 
+    a.records.locationName[dataPos];
 
 
 }

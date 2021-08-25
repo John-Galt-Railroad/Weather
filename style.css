@@ -10,6 +10,11 @@
   height: 100vh; /* 100 = 100% */
 }
 
+.title {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.5;
+}
 #title {
   width: 100%; /* 定義後就可以直接用% */
   height: 100px;
@@ -130,4 +135,12 @@
   width: 80px;
   height: auto;
   font-size: 20px;
+}
+
+.AUTHOR {
+  display: flex;
+  position: relative;
+  bottom: -50%;
+  right: -45%;
+  font-size: 12px;
 }
