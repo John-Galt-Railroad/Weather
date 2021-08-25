@@ -1,0 +1,28 @@
+/*
+* 我只是先設定格式 顏色之後再調 
+feel free to use English (changing languages are pretty waste of time),
+and don't type too many descritption ,
+it's also waste of time -LouieLu
+*/
+
+/*  https://image.flaticon.com/icons/png/512/2580/2580627.png */
+
+.main {
+  width: 100vw; /*vw,vh自動符合畫面的大小*/
+  height: 100vh; /* 100 = 100% */
+}
+
+#title {
+  width: 100%; /* 定義後就可以直接用% */
+  height: 100px;
+
+  background-color: rgb(21, 34, 214);
+  line-height: 100px; /* 由上往下100px */
+}
+
+#searchboxArea {
+  width: 100%;
+  height: 600px; /* 待調整 */
+  background-color: rgba(198, 244, 250, 0.637);
+}
+
