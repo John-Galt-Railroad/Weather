@@ -8,15 +8,18 @@
 .main {
   width: 100vw; /*vw,vh自動符合畫面的大小*/
   height: 100vh; /* 100 = 100% */
+  flex-direction: column;
 }
 
 .hidden {
   position: -999999px;
   display: none;
 }
-
+#ContentPanel {
+  width: 100%;
+  height: 100%;
+}
 .bgIMG {
-  top: -10%;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -24,15 +27,20 @@
   z-index: -25;
 }
 
-#ContentPanel {
+#CityDetail {
   position: relative;
   left: 10%;
   top: 20%;
 }
+
 .title {
-  font-size: 30px;
+  position: relative;
+  top: 20%;
+  left: 1%;
+  font-size: 190%;
   font-weight: 400;
   line-height: 1.5;
+  font-weight: 500;
 }
 #bannerBar {
   width: 100%; /* 定義後就可以直接用% */
@@ -40,44 +48,53 @@
   background-color: rgba(255, 255, 255, 0.637);
   line-height: 100px; /* 由上往下100px */
   position: fixed;
+  z-index: 10000;
 }
 /*====SearchBoxArea===*/
+#City {
+  font-size: 500%;
+  line-height: 140%;
+}
 
 #CityList {
   text-indent: -1%;
   position: absolute;
   background-color: #f6f6f6;
-  min-width: 200px;
-  border: 1px solid #ddd;
-  z-index: 50;
+  z-index: 150;
   height: auto;
+  width: 15%;
 }
 #CityList li {
   line-height: 190%;
   list-style-type: none;
+  text-decoration: none;
+  position: relative;
+  right: 5%;
+}
+#CityList li:hover {
+  background-color: #c2c2c2;
 }
 
 #searchboxArea {
   position: relative;
-  right: -85%;
-  bottom: 100%;
+  right: -75%;
+  bottom: 45%;
   z-index: 25;
 }
 #SearchBox {
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 2;
   border-radius: 0.35rem;
   border: 1px solid transparent;
-  height: 30px;
+  height: 30%;
   padding: 0.375rem 0.75rem;
-
+  background-color: #e4e4e4;
   display: inline-block;
-  font-weight: 400;
-  line-height: 1.5;
   color: #212529;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
+  font-size: 1.25rem;
 }
 
 #searchboxArea button {
@@ -95,7 +112,7 @@
   user-select: none;
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
-  font-size: 1rem;
+
   border-radius: 0.25rem;
 }
 #searchboxArea button:hover {
@@ -107,9 +124,11 @@
 
 /*=======================================================*/
 
-.content {
+.card-content {
+  width: 100vw;
   display: flex;
   justify-content: flex-start; /*可更改*/
+  line-height: 200%;
 }
 
 .card {
@@ -120,18 +139,40 @@
   align-content: center;
   background-color: rgba(255, 255, 255, 0.479);
   margin: 5;
+  border-radius: 0.5rem;
 }
 
 .card-title {
   width: 150px;
-  height: 90px;
+  height: 110px;
+  font-size: 30px;
+  font-weight: bold;
+  position: relative;
+  line-height: 100%;
+  top: 10%;
 }
 
 #tempatureValue,
-#rainingValue {
+#rainingValue,
+#selfFeelingStatus {
   width: 150px;
   height: 90;
-  color: rgb(37, 37, 37);
+  color: rgb(19, 20, 20);
+  position: relative;
+  line-height: 100%;
+  top: 10%;
+  align-items: center;
+}
+.card svg {
+  position: relative;
+  line-height: 100%;
+  top: 10%;
+}
+.card img {
+  position: relative;
+  line-height: 100%;
+  top: 10%;
+  height: 50%;
 }
 
 /*=======================================================*/
@@ -142,8 +183,8 @@
   display: flex;
 }
 .roundbutton {
-  background-color: rgba(44, 44, 44, 0.151);
-  border-color: rgba(141, 141, 141, 0.151);
+  background-color: rgba(44, 44, 44, 0.747);
+  border-color: rgba(44, 44, 44, 0.747);
   font-size: 0;
   border-radius: 1.25rem;
   box-shadow: none;
@@ -161,3 +202,62 @@
   font-size: 12px;
   color: rgb(139, 139, 139);
 }
+
+/*========================================================*/
+.temperature_content {
+  height: 700px;
+  background-color: antiquewhite;
+  align-items: center;
+}
+
+.temperature_title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+#temperature_pic {
+  text-align: center;
+}
+
+#temperature_chart {
+  width: 1000px;
+  background-color: rgb(199, 232, 245);
+}
+
+/*======================================================*/
+
+.detailed_information {
+  width: 100%;
+  height:600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#other{
+  width: 300px;
+  height: 280px;
+  font-size: 25px;
+  background-color: #c2c2c2;
+}
+#other_title{
+  font-weight: bold;
+}
+#wind{
+  width: 300px;
+  height: 280px;
+  font-size: 25px;
+  background-color: #daf8e1;
+}
+#wind_title{
+  font-weight: bold;
+}
+#sun{
+  width: 300px;
+  height: 500px;
+  font-size: 25px;
+  background-color: #faf5cb;
+}
+#sun_title{
+  font-weight: bold;
+}
+
