@@ -10,36 +10,58 @@
   height: 100vh; /* 100 = 100% */
 }
 
+.hidden {
+  position: -999999px;
+  display: none;
+}
+
+.bgIMG {
+  top: -10%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  filter: grayscale(0.25);
+  z-index: -25;
+}
+
+#ContentPanel {
+  position: relative;
+  left: 10%;
+  top: 20%;
+}
 .title {
   font-size: 30px;
   font-weight: 400;
   line-height: 1.5;
 }
-#title {
+#bannerBar {
   width: 100%; /* 定義後就可以直接用% */
   height: 100px;
-
-  background-color: rgba(21, 34, 214, 0.397);
+  background-color: rgba(255, 255, 255, 0.637);
   line-height: 100px; /* 由上往下100px */
+  position: fixed;
 }
 /*====SearchBoxArea===*/
 
 #CityList {
-  display: none;
+  text-indent: -1%;
   position: absolute;
   background-color: #f6f6f6;
-  min-width: 230px;
+  min-width: 200px;
   border: 1px solid #ddd;
-  z-index: 1;
+  z-index: 50;
+  height: auto;
+}
+#CityList li {
+  line-height: 190%;
+  list-style-type: none;
 }
 
 #searchboxArea {
-  width: 100%;
-  height: 600px;
-  background-color: rgba(198, 244, 250, 0.637);
-  position: absolute;
+  position: relative;
   right: -85%;
-  top: 10%;
+  bottom: 100%;
+  z-index: 25;
 }
 #SearchBox {
   font-weight: 400;
@@ -96,7 +118,7 @@
   display: flex;
   text-align: center;
   align-content: center;
-  background-color: rgba(255, 187, 0, 0.24);
+  background-color: rgba(255, 255, 255, 0.479);
   margin: 5;
 }
 
@@ -109,18 +131,19 @@
 #rainingValue {
   width: 150px;
   height: 90;
-  color: rgb(136, 135, 133);
+  color: rgb(37, 37, 37);
 }
 
 /*=======================================================*/
 .buttonArea {
-  position: relative;
+  position: fixed;
   bottom: 10px;
   left: 45%;
   display: flex;
 }
 .roundbutton {
-  background-color: rgb(253, 253, 253);
+  background-color: rgba(44, 44, 44, 0.151);
+  border-color: rgba(141, 141, 141, 0.151);
   font-size: 0;
   border-radius: 1.25rem;
   box-shadow: none;
@@ -128,19 +151,13 @@
   height: 10px;
   border-color: none;
 }
-
 .roundbutton:hover {
-  position: relative;
-  top: 5px;
-  width: 80px;
-  height: auto;
-  font-size: 20px;
 }
-
 .AUTHOR {
   display: flex;
   position: relative;
   bottom: -50%;
   right: -45%;
   font-size: 12px;
+  color: rgb(139, 139, 139);
 }

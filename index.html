@@ -10,7 +10,7 @@
     <body class="main" onload="loadpageFunc()">
 
     <!-- bannerBar -->
-      <div id="title">
+      <div id="bannerBar">
         <header>
           <img 
             src='https://wede.cwb.gov.tw/res/images/cwb.png' 
@@ -19,12 +19,12 @@
           />
           <span class="title">Untitled Super Cool Weather Website</sapn>
           </header> 
-    </div>
+    
 
     <!-- search Area -->
     <div id="searchboxArea">
 
-        <input type="inputbox" onkeyup="showSearchResult()" placeholder="Search Your City..." id="SearchBox">
+        <input type="inputbox" onkeyup="showSearchResult()" placeholder="Search Your City..." id="SearchBox" value="">
         <button onclick="Search()">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
@@ -55,25 +55,28 @@
             <li><a href="#" onclick="Search(this.innerHTML)">屏東縣</a></li>
           </ul>
       </div>
-
+    </div>
+  </div>
+  //C F switch
         <!--titleButton-->
-        <div class="buttonArea">
+          
+          <div class=" buttonArea ">
             <input type="button" class="roundbutton" value="今天"></input>
             <input type="button" class="roundbutton" value="明天"></input>
             <input type="button" class="roundbutton" value="10天"></input>
         </div>
-
-
-          </div>
-
-      
+      <!--backgroundImg-->
+      <div>
+        <img  class="bgIMG"src="./picture/T_1-01.jpg"
+        "></div>
+      </div>
      
-
+      
       
       <!-- Content Area -->
       <div id="ContentPanel">
         <div id="CityDetail">
-            <h1 id="City">台北市</h1> 
+            <h1 id="City">臺北市 全市</h1> 
           <h1 id="WeatherStatus">氣候宜人
             <img src='https://media.istockphoto.com/vectors/partly-cloudy-icon-vector-id1164212956?k=6&m=1164212956&s=170667a&w=0&h=qHdT0Wwq5uRYggnDuSaK02BicMPO7_rU16MaGZuLZfg='
               width="100" height="100"
@@ -104,6 +107,16 @@
               </h5>
               <p style="font-size:30px" id="rainingValue">30%</p>
             </div>
+            <div class="card">
+              <h5 class="card-title" style="font-size:30px">
+                你會覺得<br>
+                <svg class="rain_icon" 
+                width="48" height="48" id="rain-alt" 
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M17,5a4.08,4.08,0,0,0-.93.12,5,5,0,0,0-9,2.09A3,3,0,1,0,6,13H17a4,4,0,0,0,0-8Z" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path d="M6,17,5,19m5-2L8,21m6-4-1,2m5-2-2,4" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path></svg> 
+              </h5>
+              <p style="font-size:30px" id="selfFeelingStatus">舒適至悶熱</p>
+            </div>
          
 
           </div>
@@ -116,9 +129,20 @@
     <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
         <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" d="M 9.852 459.36 L 68.624 457.84 C 81.657 414.396 162.849 437.138 156.731 457.533 L 246.254 457.754 L 318.13 457.35 L 379.947 456.994 L 442.474 456.594 L 491.379 456.281"/>
     </svg>
+<!---Detailed Info Area--->
+<div>
+  <h1>詳細資訊</h1>
 
+  //降雨量
+  //風
+  //日昇與日落
+
+</div>
 
 <!----Bottom Area---->
+
+
+
 <!---Auther-->
 <div class="AUTHOR">
     <p>Made By hah_Lu & danxuanru | Using CWB Weather API</p>
