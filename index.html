@@ -11,22 +11,22 @@
 
     <!-- bannerBar -->
       <div id="bannerBar">
-          <span class="title">Untitled Super Cool Weather Website</sapn>
+        <span class="title">Untitled Super Cool Weather Website</sapn>
 
-        <!-- search Area -->
-          <div id="searchboxArea">
+          <!-- search Area -->
+        <div id="searchboxArea">
 
-            <input type="inputbox" onkeyup="showSearchResult()" placeholder="Search Your City..." id="SearchBox" value="">
-            <button id="SearchButton">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-              </svg>
-            </button>
-            <ul id="CityList">
+          <input type="inputbox" onkeyup="showSearchResult()" placeholder="Search Your City..." id="SearchBox" value="">
+          <button id="SearchButton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+          </button>
+          <ul id="CityList">
             
            
-            </ul>
-          </div>
+          </ul>
+        </div>
       </div>
   
         <!--titleButton-->
@@ -43,19 +43,20 @@
       <!-- Content Area -->
       <div id="ContentPanel">
         <div>
-          <img  class="bgIMG"src="./picture/T_1-01.jpg">
+          <img  class="bgIMG" id="backgroundImg"
+                src="./picture/T_1-01.jpg">
         </div>
 
         <div id="CityDetail">
           <h1 id="City">臺北市 全境</h1> 
-          <h1 id="WeatherStatus">氣候宜人
-            <img  src=https://image.flaticon.com/icons/png/512/1163/1163662.png'
-                  alt="weather_icon"/>
-          </h1>
+          <div>
+            <h1 id="WeatherStatus">氣候宜人</h1>
+              <img  src="https://image.flaticon.com/icons/png/512/1163/1163662.png"
+                    id="weatherIcon" calss="weather_icon" width="48" height="48">
             
-          
-          
-
+          </div>
+            
+       
           <div class="card-content">
             <div class="card" >
               <h5 class="card-title">
@@ -81,17 +82,14 @@
             <div class="card">
               <h5 class="card-title">
                 你會覺得<br>
-                <img  id="EmotionIcon" calss="emation_icon" src="" width="48" height="48"> 
+                <img  id="EmotionIcon" calss="emation_icon" src="https://image.flaticon.com/icons/png/512/747/747402.png" width="48" height="48"> 
               </h5>
               <p style="font-size:27px" id="selfFeelingStatus">舒適至悶熱</p>
             </div>
-         
-
           </div>
-
         </div>
-          
       </div>
+
 
       <div class="temperature_content">
         <div id="temperature_pic">
@@ -173,12 +171,58 @@
       </div>
       
 
+    <!-- 
     <p>舒適度</p>
     <p>溫度</p>
-    <p>天氣情況</p>   這三個為什麼在上面
+    <p>天氣情況</p>   這三個為什麼在上面 提醒我自己用的
+    -->
+<div class="DistrictWeather">
+  <br>
+  <h1 >其他詳細內容</h1>
+  <hr>
+  <div class="detailed_information">
+    <div class="card" id="other">
+      <div class="card-header" id="other_title">
+        其他資訊
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">露點溫度<br><p id="Td">25</p></li>
+        <li class="list-group-item">相對濕度<br><p id="Rh">30</p></li>
+      </ul>
+    </div>
+    <div class="card" id="wind">
+      <div class="card-header" id="wind_title">
+        風
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">風向<br><p id="windD">30</p></li>
+        <li class="list-group-item">風速<br><p id="windS">30</p></li>
+      </ul>
+    </div>
+    <div class="card" id="sun">
+      <div class="card-header" id="sun_title">
+        日昇與日落
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">日昇時間<br><p >30</p></li>
+        <li class="list-group-item">日落時間<br><p >30</p></li>
+        <li class="list-group-item">日照時長<br><p >30</p></li>
+        <li class="list-group-item">日照剩餘時間<br><p >30</p></li>
+      </ul>
+    </div>
+
+  </div>
+
+
+</div>
+
+</div>
+
+
 
   <!---Detailed Info Area--->
-    
+  <div class="inforArea hidden">
+    <br>
     <h1 >其他詳細內容</h1>
     <hr>
     <div class="detailed_information">
@@ -187,8 +231,8 @@
           其他資訊
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">露點溫度<br><p id="Td">30°C</p></li>
-          <li class="list-group-item">相對濕度<br><p id="Rh">30°C</p></li>
+          <li class="list-group-item">露點溫度<br><p id="Td">25</p></li>
+          <li class="list-group-item">相對濕度<br><p id="Rh">30</p></li>
         </ul>
       </div>
       <div class="card" id="wind">
@@ -196,8 +240,8 @@
           風
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">風向<br><p >30°C</p></li>
-          <li class="list-group-item">風速<br><p >30°C</p></li>
+          <li class="list-group-item">風向<br><p >30</p></li>
+          <li class="list-group-item">風速<br><p >30</p></li>
         </ul>
       </div>
       <div class="card" id="sun">
@@ -205,14 +249,15 @@
           日昇與日落
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">日昇時間<br><p >30°C</p></li>
-          <li class="list-group-item">日落時間<br><p >30°C</p></li>
-          <li class="list-group-item">日照時長<br><p >30°C</p></li>
-          <li class="list-group-item">日照剩餘時間<br><p >30°C</p></li>
+          <li class="list-group-item">日昇時間<br><p >30</p></li>
+          <li class="list-group-item">日落時間<br><p >30</p></li>
+          <li class="list-group-item">日照時長<br><p >30</p></li>
+          <li class="list-group-item">日照剩餘時間<br><p >30</p></li>
         </ul>
       </div>
 
     </div>
+  </div>
     <!--===========================================================================-->
       
 
